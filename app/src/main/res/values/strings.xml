@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="permission_needed">Permission needed</string>
+    <string name="location_needed">Location needed</string>
+    <string name="location_permission_description">To show weather details, allow Weather access to your location</string>
+    <string name="open_setting">Open Setting</string>
+    <string name="cancel">Cancel</string>
+</resources>

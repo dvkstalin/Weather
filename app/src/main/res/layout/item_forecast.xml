@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_forecast_item"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:padding="12dp">
+
+    <ImageView
+        android:id="@+id/forecastImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toStartOf="@id/forecastTempTv"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/forecastTempTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/avenir_heavy"
+        app:layout_constraintEnd_toStartOf="@id/dateDescConstraint"
+        android:textSize="50sp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/forecastImage"
+        app:layout_constraintStart_toEndOf="@+id/forecastImage"
+        app:layout_constraintTop_toTopOf="@+id/forecastImage" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dateDescConstraint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/forecastImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/forecastTempTv"
+        app:layout_constraintTop_toTopOf="@+id/forecastImage">
+
+        <TextView
+            android:id="@+id/forecastDateTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/avenir_roman"
+            android:textColor="@color/white78"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/forecastDescTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/forecastDescTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/avenir_roman"
+            android:textColor="@color/white61"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/forecastDateTv"
+            app:layout_constraintStart_toStartOf="@+id/forecastDateTv"
+            app:layout_constraintTop_toBottomOf="@+id/forecastDateTv" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
